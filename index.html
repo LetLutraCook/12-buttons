@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12 Buttons Game</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        padding: 15px;
+      }
+
+      button {
+        margin: 3px;
+        border: 2px solid black;
+        background-color: #eeeeee;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="welcomeh1">Welcome to <i>The Very Awesome 12 Buttons Game</i>!</h1>
+    <h1 id="hinth1">Find the button that makes the buttons orange.</h1>
+
+    <button id="button1" onclick="changeVisibility(wh1, 'block')">Press me!</button>
+    <button id="button2" onclick="changeBackgroundColor(body, 'orange')">Don't press me.</button>
+    <button id="button3" onclick="changeSize(b3, '100px', '40px')">Click this one.</button>
+    <button id="button4" onclick="changeBorder(b4, '3px', 'solid', 'green')">How about this one?</button>
+    <button id="button5" onclick="changeVisibility(b5, 'none')">Maybe not this one.</button>
+    <button id="button6" onclick="changeBackgroundColor(b6, 'green')">But this one?</button>
+    <button id="button7" onclick="changeSize(b7, '80px', '60px')">Or this one?</button>
+    <button id="button8" onclick="changeBorder(b8, '6px', 'dashed', 'gray')"><i>Definitely</i> not this one.</button>
+    <button id="button9" onclick="changeVisibility(b9, 'inline-block')">But this one is fine.</button>
+    <button id="button10" onclick="changeBackgroundColor(b10, 'purple')">Or you can click me!</button>
+    <button id="button11" onclick="changeSize(b11, '20px', '30px')">Or not.</button>
+    <button id="button12" onclick="changeBorder(b12, '2px', 'solid', 'white')">But...?</button>
+
+    <script>
+      const body = document.body;
+      
+      const wh1 = document.getElementById("welcomeh1");
+      var hh1 = document.getElementById("hinth1");
+      
+      const b1 = document.getElementById("button1");
+      const b2 = document.getElementById("button2");
+      const b3 = document.getElementById("button3");
+      const b4 = document.getElementById("button4");
+      const b5 = document.getElementById("button5");
+      const b6 = document.getElementById("button6");
+      const b7 = document.getElementById("button7");
+      const b8 = document.getElementById("button8");
+      const b9 = document.getElementById("button9");
+      const b10 = document.getElementById("button10");
+      const b11 = document.getElementById("button11");
+      const b12 = document.getElementById("button12");
+
+      wh1.style.display = "none";
+
+      function changeVisibility(element, display) {
+        element.style.display = `${display}`;
+      }
+
+      function changeBackgroundColor(element, color) {
+        element.style.backgroundColor = `${color}`;
+      }
+
+      function changeSize(element, w, h) {
+        element.style.width = `${w}`;
+        element.style.height = `${h}`;
+      }
+
+      function changeBorder(element, w, style, color) {
+        element.style.border = `${w} ${style} ${color}`;
+      }
+    </script>
+  </body>
+</html>
